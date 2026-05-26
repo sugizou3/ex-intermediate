@@ -26,7 +26,7 @@ public class HotelService {
         if (price == null) {
             return repository.findAll();
         }
-        return repository.priceLowPassFilter(price);
+        return repository.findByLessThanPrice(price);
     }
 
 }

@@ -28,7 +28,7 @@ public class HotelRepository {
      * @param price 値段の閾値
      * @return ホテル情報
      */
-    public List<Hotel> priceLowPassFilter(Integer price) {
+    public List<Hotel> findByLessThanPrice(Integer price) {
         String sql = """
                 SELECT area_name, hotel_name, address, nearest_station, price, parking FROM hotels
                 WHERE price <= :price
