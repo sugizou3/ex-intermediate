@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * チーム情報を取得するメソッドを作成する
+ * チーム情報を取得するメソッドを作成する.
  */
 @Service
 public class TeamService {
@@ -33,6 +33,4 @@ public class TeamService {
     public Team findById(Integer id) {
         return repository.findById(id);
     }
-
-
 }

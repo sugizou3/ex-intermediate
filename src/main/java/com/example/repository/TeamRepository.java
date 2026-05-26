@@ -11,6 +11,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * teamsテーブルを操作するリポジトリ.
+ */
 @Repository
 public class TeamRepository {
     RowMapper<Team> TEAM_ROW_MAPPER
@@ -37,7 +40,7 @@ public class TeamRepository {
     }
 
     /**
-     * idに紐づいたチーム情報を取得する
+     * idに紐づいたチーム情報を取得する.
      *
      * @param id id
      * @return チーム情報

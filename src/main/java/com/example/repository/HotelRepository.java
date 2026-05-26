@@ -11,6 +11,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * hotelsテーブルを操作するリポジトリ.
+ */
 @Repository
 public class HotelRepository {
     RowMapper<Hotel> HOTEL_ROW_MAPPER

@@ -10,15 +10,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
+/**
+ * 野球チーム情報の表示を制御するコントローラー.
+ */
 @Controller
 @RequestMapping("/team")
-
 public class TeamController {
     @Autowired
     private TeamService service;
 
     /**
-     * チーム一覧表示
+     * チーム一覧表示.
      *
      * @param model リクエストスコープ
      * @return チーム一覧表示画面
@@ -27,12 +29,11 @@ public class TeamController {
     public String teamList(Model model) {
         List<Team> teams = service.findAll();
         model.addAttribute("teams", teams);
-        System.out.println(teams);
         return "team-list";
     }
 
     /**
-     * チームの詳細表示
+     * チームの詳細表示.
      *
      * @param id    id
      * @param model リクエストスコープ
@@ -44,5 +45,5 @@ public class TeamController {
         model.addAttribute("team", team);
         return "team-detail";
     }
-    
+
 }

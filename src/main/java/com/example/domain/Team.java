@@ -3,9 +3,8 @@ package com.example.domain;
 import lombok.*;
 
 /**
- * 野球チームを表すドメイン
+ * 野球チームを表すドメイン.
  */
-
 @Getter
 @Setter
 @NoArgsConstructor
