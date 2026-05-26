@@ -1,13 +1,11 @@
 spring:
-  application:
-    name: ex-intermediate
   datasource:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/student
     username: postgres
     password: postgres
-  server:
-    servlet:
-      context-path: /ex-intermediate
-
-kind: Application
+  jmx:
+    default-domain: ex-intermediate
+server:
+  servlet:
+    context-path: /ex-intermediate

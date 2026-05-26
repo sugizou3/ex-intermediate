@@ -6,9 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/team")
+
 public class TeamController {
     @GetMapping("/")
     public String index() {
+        System.out.println("test");
         return "team-list";
     }
 
