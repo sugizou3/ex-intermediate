@@ -21,19 +21,23 @@ public class Team {
     private Integer id;
 
     /**
+     * リーグ名
+     */
+    private String leagueName;
+    /**
      * 球団名
      */
-    private String name;
+    private String teamName;
 
     /**
      * 本拠地
      */
-    private String homeField;
+    private String headquarters;
 
     /**
      * 発足
      */
-    private Date launch;
+    private Date inauguration;
 
     /**
      * 歴史
