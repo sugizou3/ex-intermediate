@@ -3,7 +3,7 @@ package com.example.domain;
 import lombok.*;
 
 /**
- * 衣類を表すドメイン
+ * 衣類を表すドメイン.
  */
 @Getter
 @Setter
