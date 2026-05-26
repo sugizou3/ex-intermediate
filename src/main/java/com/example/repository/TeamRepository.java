@@ -19,6 +19,11 @@ public class TeamRepository {
     @Autowired
     private NamedParameterJdbcTemplate template;
 
+    /**
+     * 全チーム情報を取得する.
+     *
+     * @return 全チーム情報
+     */
     public List<Team> findAll() {
         String sql = """
                 SELECT  league_name, team_name, headquarters, inauguration, history 
@@ -30,6 +35,12 @@ public class TeamRepository {
         return template.query(sql, param, TEAM_ROW_MAPPER);
     }
 
+    /**
+     * idに紐づいたチーム情報を取得する
+     *
+     * @param id id
+     * @return チーム情報
+     */
     public Team findById(Integer id) {
         String sql = """
                 SELECT  league_name, team_name, headquarters, inauguration, history 
