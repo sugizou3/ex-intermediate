@@ -25,10 +25,11 @@ public class HotelRepository {
      * @param price 値段の閾値
      * @return ホテル情報
      */
-    public List<Hotel> moneyLowPassFilter(Integer price) {
+    public List<Hotel> priceLowPassFilter(Integer price) {
         String sql = """
                 SELECT area_name, hotel_name, address, nearest_station, price, parking FROM hotels
                 WHERE price <= :price
+                ORDER BY price
                 """;
         SqlParameterSource param
                 = new MapSqlParameterSource()

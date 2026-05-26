@@ -14,9 +14,9 @@ import java.util.List;
 public class HotelService {
     @Autowired
     private HotelRepository repository;
-    
-    public List<Hotel> moneyLowPassFilter(Integer price) {
-        return repository.moneyLowPassFilter(price);
+
+    public List<Hotel> priceLowPassFilter(Integer price) {
+        return repository.priceLowPassFilter(price);
     }
 }
 

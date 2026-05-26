@@ -6,11 +6,36 @@
     <title>Document</title>
   </head>
   <body>
-    <div><strong>球団名</strong><br><span th:text="${team.teamName}">読売ジャイアンツ</span></div>
-    <div><strong>本拠地</strong><br><span th:text="${team.headquarters}">東京ドーム</span></div>
-    <div><strong>発足</strong><br><span th:text="${team.inauguration}">1934年</span></div>
-    <div><strong>歴史</strong><br><span th:text="${team.history}" style="white-space: pre-wrap;">歴史</span></div>
-
-    
+    <div>
+      <strong>球団名</strong><br /><span th:text="${team.teamName}"
+        >読売ジャイアンツ</span
+      >
+    </div>
+    <div>
+      <strong>本拠地</strong><br /><span th:text="${team.headquarters}"
+        >東京ドーム</span
+      >
+    </div>
+    <div>
+      <strong>発足</strong><br /><span th:text="${team.inauguration}"
+        >1934年</span
+      >
+    </div>
+    <div>
+      <strong>歴史</strong><br /><span
+        th:text="${team.history}"
+        style="white-space: pre-wrap"
+        >歴史</span
+      >
+    </div>
+    <button
+      type="button"
+      onclick="location.href = 'hotel-search.html'"
+      th:onclick="|location.href='@{/team/}'|"
+      class="button-style"
+    >
+      戻る
+    </button>
   </body>
 </html>
+

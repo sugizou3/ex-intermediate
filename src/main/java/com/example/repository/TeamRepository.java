@@ -28,6 +28,7 @@ public class TeamRepository {
         String sql = """
                 SELECT id, league_name, team_name, headquarters, inauguration, history 
                 FROM teams;
+                ORDER BY inauguration DESC
                 """;
         SqlParameterSource param
                 = new MapSqlParameterSource();
