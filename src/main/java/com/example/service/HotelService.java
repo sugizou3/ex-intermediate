@@ -16,7 +16,12 @@ public class HotelService {
     private HotelRepository repository;
 
     public List<Hotel> priceLowPassFilter(Integer price) {
+        System.out.println(price);
+        if (price == null) {
+            return repository.findAll();
+        }
         return repository.priceLowPassFilter(price);
     }
+
 }
 

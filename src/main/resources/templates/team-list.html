@@ -14,6 +14,7 @@
   </head>
   <body>
     <h1>野球チーム一覧</h1>
+    <span th:if="${#lists.isEmpty(teams)}"></span>
     <ul>
       <li class="no-bullet" th:each="team:${teams}">
         <a
