@@ -2,8 +2,6 @@ package com.example.domain;
 
 import lombok.*;
 
-import java.util.Date;
-
 /**
  * 野球チームを表すドメイン
  */
@@ -37,7 +35,7 @@ public class Team {
     /**
      * 発足
      */
-    private Date inauguration;
+    private String inauguration;
 
     /**
      * 歴史

@@ -26,7 +26,7 @@ public class TeamRepository {
      */
     public List<Team> findAll() {
         String sql = """
-                SELECT  league_name, team_name, headquarters, inauguration, history 
+                SELECT id, league_name, team_name, headquarters, inauguration, history 
                 FROM teams;
                 """;
         SqlParameterSource param
